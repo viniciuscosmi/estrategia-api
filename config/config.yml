@@ -1,0 +1,3 @@
+hosts: http://54.207.100.192/
+paths:
+  register: /auth/register
