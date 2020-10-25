@@ -5,7 +5,7 @@ module Helpers
     json_register = fill_register_json
     request_post_register = Auth.post(CONFIG['paths']['register'], body: json_register)
     expect(request_post_register.code).to eq(200)
-    json_register
+    [json_register, request_post_register]
   end
 
 end
