@@ -1,4 +1,4 @@
-describe 'POST Auth' do
+context 'POST Auth' do
   describe 'with a valid register json' do
     it 'should return the user created' do
       json_register = fill_register_json
@@ -16,7 +16,6 @@ describe 'POST Auth' do
       expect(user['name']).to eq(request_post_authenticate['user']['name'])
       expect(user['email']).to eq(request_post_authenticate['user']['email'])
       expect(request_post_authenticate['token']).not_to be_empty
-      puts request_post_authenticate.parsed_response
     end
   end
   describe 'with a invalid data in register json' do

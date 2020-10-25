@@ -1,6 +1,7 @@
 module Projects
   include HTTParty
   base_uri CONFIG['hosts']
+  headers 'Content-Type' => 'application/json'
 
   def fill_projects_json(assignedTo = Faker::Name.middle_name )
     json = File.read('templates/projects/projects.json')
