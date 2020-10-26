@@ -19,7 +19,7 @@ context 'POST Auth' do
     end
   end
   describe 'with a invalid data in register json' do
-    it 'shouldnt return the user authenticate' do
+    it 'should not return the user authenticate' do
       json_authenticate = fill_authenticate_json
       request_post = Auth.post(CONFIG['paths']['authenticate'], body: json_authenticate)
       expect(request_post.code).to eq(400)
